@@ -82,11 +82,13 @@ main {
 .review {
   background: var(--white-color);
   padding: 3.2rem;
-  max-width: 60rem;
+  max-width: 35rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .review-author-img {
@@ -164,4 +166,10 @@ main {
 
 .btn:hover {
   background-color: var(--dark-primary-color);
+}
+
+@media screen and (min-width: 800px) {
+  .review {
+    max-width: 50rem;
+  }
 }
