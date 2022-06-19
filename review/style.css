@@ -110,6 +110,7 @@ main {
   letter-spacing: 0.2rem;
   margin-top: 1rem;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .review-author-job {
@@ -117,6 +118,7 @@ main {
   color: var(--primary-color);
   margin-top: 0.5rem;
   font-weight: 500;
+  text-transform: capitalize;
 }
 
 .review-text {
@@ -151,7 +153,7 @@ main {
   color: var(--primary-color);
 }
 
-.btn {
+.btn-surprise {
   background-color: transparent;
   border: none;
   outline: none;
@@ -164,7 +166,7 @@ main {
   transition: all 0.5s;
 }
 
-.btn:hover {
+.btn-surprise:hover {
   background-color: var(--dark-primary-color);
 }
 
