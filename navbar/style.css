@@ -108,12 +108,21 @@ h1 {
   transform: scale(1.1);
 }
 
+.navbar-all-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.show-navbar-all-links {
+  height: 14rem;
+}
+
 .navbar-links {
   margin-top: 2.4rem;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  /* display: none; */
 }
 
 .navbar-link {
@@ -128,9 +137,9 @@ h1 {
 }
 
 .social-links {
-  margin-top: 1.6rem;
   display: flex;
   gap: 1.4rem;
+  margin-top: 1.6rem;
 }
 
 .social-link {
@@ -156,8 +165,14 @@ h1 {
     flex-direction: row;
     margin-top: 0;
     gap: 4.8rem;
+    margin-right: 6.4rem;
   }
   .social-links {
     margin-top: 0;
+  }
+  .navbar-all-links {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
   }
 }
