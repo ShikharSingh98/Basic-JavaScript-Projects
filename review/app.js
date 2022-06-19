@@ -75,6 +75,6 @@ prevBtn.addEventListener('click', function () {
 //show random review
 
 surpriseBtn.addEventListener('click', function () {
-  const randomNumber = Math.floor(Math.random() * reviews.length);
-  displayReview(randomNumber);
+  currentItem = Math.floor(Math.random() * reviews.length);
+  displayReview(currentItem);
 });
