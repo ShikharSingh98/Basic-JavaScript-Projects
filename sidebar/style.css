@@ -23,9 +23,9 @@
   --dark-grey-color: #495057;
 
   /* Shades of primary color */
-  --light-primary-color: #63e6be;
-  --primary-color: #20c997;
-  --dark-primary-color: #0ca678;
+  --light-primary-color: #ffc078;
+  --primary-color: #ff922b;
+  --dark-primary-color: #f76707;
 
   /* white color */
   --white-color: #ffffff;
@@ -59,11 +59,6 @@ ul {
   list-style-type: none;
 }
 
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
-}
-
 img {
   display: block;
   width: 100%;
@@ -71,4 +66,122 @@ img {
 
 h1 {
   font-size: 4.4rem;
+}
+
+button {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/*
+========= 
+Sidebar
+========
+ */
+
+.sidebar-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+  color: var(--dark-primary-color);
+  transform: scale(1.2);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 2.4rem;
+  transition: var(--transition);
+  transform: translate(-100%);
+}
+
+.show-sidebar {
+  transform: translate(0);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 2.4rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.close-btn {
+  font-size: 1.8rem;
+  color: var(--black-color);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--light-primary-color);
+}
+
+.links {
+  margin-top: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.links a:link,
+.links a:visited {
+  font-size: 1.6rem;
+  color: var(--dark-grey-color);
+  transition: var(--transition);
+}
+
+.links a:hover,
+.links a:active {
+  color: var(--dark-primary-color);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+.social-links a:link,
+.social-links a:visited {
+  color: var(--dark-grey-color);
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.social-links a:hover,
+.social-links a:active {
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    width: 40rem;
+  }
 }
