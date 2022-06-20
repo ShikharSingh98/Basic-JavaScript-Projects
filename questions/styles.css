@@ -23,9 +23,9 @@
   --dark-grey-color: #495057;
 
   /* Shades of primary color */
-  --light-primary-color: #74c0fc;
-  --primary-color: #339af0;
-  --dark-primary-color: #1c7ed6;
+  --light-primary-color: #63e6be;
+  --primary-color: #20c997;
+  --dark-primary-color: #0ca678;
 
   /* white color */
   --white-color: #ffffff;
@@ -48,7 +48,6 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--light-grey-color);
 }
 
 a {
@@ -77,4 +76,71 @@ button {
 .container {
   max-width: 120rem;
   margin: 0 auto;
+}
+
+/* 
+==========
+Questions 
+==========
+*/
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.questions-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  height: 100vh;
+  padding: 0 3.2rem;
+}
+
+.heading {
+  color: var(--black-color);
+}
+
+.question {
+  background-color: var(--white-color);
+  padding: 1.6rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  box-shadow: var(--light-box-shadow);
+  border-radius: 5px;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 9.6rem;
+}
+
+.question-title {
+  color: var(--dark-primary-color);
+  font-size: 1.6rem;
+}
+
+.question-toggle-btn {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.question-text {
+  border-top: 1px solid var(--light-grey-color);
+  padding-top: 1.6rem;
+  display: none;
+  font-size: 1.4rem;
+  color: var(--dark-grey-color);
+  line-height: 1.5;
+  max-width: 55rem;
+}
+
+.show-question-text {
+  display: block;
 }
