@@ -138,9 +138,26 @@ Questions
   font-size: 1.4rem;
   color: var(--dark-grey-color);
   line-height: 1.5;
-  max-width: 55rem;
 }
 
-.show-question-text {
+.fa-angle-up {
+  display: none;
+}
+
+.show-text .question-text {
   display: block;
+}
+
+.show-text .fa-angle-down {
+  display: none;
+}
+
+.show-text .fa-angle-up {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .question {
+    width: 55rem;
+  }
 }
