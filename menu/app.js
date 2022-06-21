@@ -82,7 +82,38 @@ const menu = [
 ];
 
 const sectionCenter = document.querySelector('.section-center');
-const buttons = document.querySelectorAll('.button');
+const buttonContainer = document.querySelector('.button-container');
+
+function displayCategoryButtons() {
+  let categories = menu.reduce(
+    function (values, item) {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ['all']
+  );
+  const categoryButtons = categories.map(function (category) {
+    return `<button class="button" data-category="${category}">${category}</button>`;
+  });
+  buttonContainer.innerHTML = categoryButtons.join('');
+  //after inserting buttons then they are available to be selected
+  const buttons = document.querySelectorAll('.button');
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      const filteredCategory = event.currentTarget.dataset.category;
+      if (filteredCategory === 'all') {
+        displayMenuItems(menu);
+      } else {
+        const filteredMenuItems = menu.filter(function (menuItem) {
+          return menuItem.category === filteredCategory;
+        });
+        displayMenuItems(filteredMenuItems);
+      }
+    });
+  });
+}
 
 function displayMenuItems(menuItems) {
   const markupArr = menuItems.map(function (item) {
@@ -101,20 +132,7 @@ function displayMenuItems(menuItems) {
   sectionCenter.innerHTML = markupArr.join('');
 }
 
-buttons.forEach(function (button) {
-  button.addEventListener('click', function (event) {
-    const filteredCategory = event.currentTarget.dataset.category;
-    if (filteredCategory === 'all') {
-      displayMenuItems(menu);
-    } else {
-      const filteredMenuItems = menu.filter(function (menuItem) {
-        return menuItem.category === filteredCategory;
-      });
-      displayMenuItems(filteredMenuItems);
-    }
-  });
-});
-
 window.addEventListener('DOMContentLoaded', function () {
   displayMenuItems(menu);
+  displayCategoryButtons();
 });
