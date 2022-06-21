@@ -156,6 +156,10 @@ Menu
   overflow: hidden;
 }
 
+.menu-item-img {
+  height: 20rem;
+}
+
 .menu-item-info {
   padding: 1.6rem;
 }
@@ -166,6 +170,7 @@ Menu
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-transform: capitalize;
 }
 
 .menu-item-header h2 {
