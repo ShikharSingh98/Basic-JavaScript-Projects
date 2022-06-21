@@ -89,9 +89,9 @@ function displayMenuItems(menuItems) {
     </article>`;
   });
 
-  return markupArr;
+  sectionCenter.innerHTML = markupArr.join('');
 }
 
 window.addEventListener('DOMContentLoaded', function () {
-  sectionCenter.innerHTML = displayMenuItems(menu).join('');
+  displayMenuItems(menu);
 });
