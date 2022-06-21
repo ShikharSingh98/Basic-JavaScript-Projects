@@ -23,9 +23,9 @@
   --dark-grey-color: #495057;
 
   /* Shades of primary color */
-  --light-primary-color: #63e6be;
-  --primary-color: #20c997;
-  --dark-primary-color: #0ca678;
+  --light-primary-color: #ffe066;
+  --primary-color: #fcc419;
+  --dark-primary-color: #fab005;
 
   /* white color */
   --white-color: #ffffff;
@@ -61,6 +61,8 @@ ul {
 img {
   display: block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 h1 {
@@ -76,4 +78,121 @@ button {
 .container {
   max-width: 120rem;
   margin: 0 auto;
+}
+
+/* 
+=========
+Header
+=========
+*/
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading h1 {
+  color: var(--black-color);
+}
+
+.underline {
+  margin-top: 0.2rem;
+  width: 70%;
+  height: 0.5rem;
+  background: var(--primary-color);
+}
+
+.button-container {
+  margin-top: 4.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.button {
+  background-color: var(--primary-color);
+
+  color: var(--white-color);
+  padding: 0.8rem 1.6rem;
+  border-radius: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.button:hover {
+  background-color: var(--dark-primary-color);
+}
+
+/* 
+===========
+Menu
+=========
+*/
+
+.section-center {
+  margin-top: 12.8rem;
+  display: grid;
+  gap: 3.2rem 2.4rem;
+  justify-items: center;
+}
+
+.menu-item {
+  display: grid;
+  align-items: center;
+  max-width: 35rem;
+  box-shadow: var(--light-box-shadow);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.menu-item-info {
+  padding: 1.6rem;
+}
+
+.menu-item-header {
+  border-bottom: 1px solid var(--light-grey-color);
+  padding-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item-header h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--dark-primary-color);
+}
+
+.menu-price {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--black-color);
+}
+
+.menu-item-text {
+  font-size: 1.3rem;
+  line-height: 1.3;
+  margin-top: 1.6rem;
+  color: var(--dark-grey-color);
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-item {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 55rem;
+  }
 }
