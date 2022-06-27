@@ -22,11 +22,10 @@
   --grey-color: #868e96;
   --dark-grey-color: #495057;
 
-  /* Shades of primary color */
-  --light-primary-color: #9775fa;
-  --primary-color: #7048e8;
-  --dark-primary-color: #5f3dc4;
-
+  /*  colors */
+  --orange-color: #fd7e14;
+  --purple-color: #845ef7;
+  --teal-color: #20c997;
   /* white */
   --white-color: #ffffff;
 }
@@ -56,4 +55,55 @@ img {
 
 h1 {
   font-size: 4.4rem;
+}
+
+.section-center {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.card {
+  background-color: var(--white-color);
+  width: 100%;
+  max-width: 45rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.card:nth-child(1) {
+  border-left: 10px solid var(--orange-color);
+}
+
+.card:nth-child(2) {
+  border-left: 10px solid var(--purple-color);
+}
+
+.card:nth-child(3) {
+  border-left: 10px solid var(--teal-color);
+}
+
+.number {
+  color: var(--dark-grey-color);
+  font-size: 4.4rem;
+}
+
+.card-heading {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
