@@ -145,6 +145,7 @@ button {
 
 .main-img {
   width: 35rem;
+  height: 20rem;
 }
 
 .image-name {
@@ -157,10 +158,11 @@ button {
 
 .modal-image {
   width: 15rem;
+  filter: brightness(30%);
 }
 
 .selected {
-  filter: brightness(30%);
+  filter: brightness(100%);
 }
 
 .button-container {
