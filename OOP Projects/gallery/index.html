@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu</title>
+    <title>Gallery</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -15,6 +15,69 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="container">
+      <!-- Nature Gallery -->
+      <section class="section-center nature">
+        <img src="./images/nature-1.jpeg" alt="nature imgs" class="img" title="nature-1" data-id="1" />
+        <img src="./images/nature-2.jpeg" alt="nature imgs" class="img" title="nature-2" data-id="2" />
+        <img
+          src="./images/nature-3.jpeg"
+          alt="nature imgs"
+          class="img"
+          title="
+        nature-3"
+          data-id="3"
+        />
+      </section>
+      <!-- City Gallery -->
+      <section class="section-center city">
+        <img src="./images/city-1.jpeg" alt="city-img" class="img" title="city-1" data-id="1" />
+        <img src="./images/city-2.jpeg" alt="city-img" class="img" title="city-2" data-id="2" />
+        <img
+          src="./images/city-3.jpeg"
+          alt="city-img"
+          class="img"
+          title="
+        city-3"
+          data-id="3"
+        />
+        <img
+          src="./images/city-4.jpeg"
+          alt="city-img"
+          class="img"
+          title="
+        city-4"
+          data-id="4"
+        />
+        <img
+          src="./images/city-5.jpeg"
+          alt="city-img"
+          class="img"
+          title="
+        city-5"
+          data-id="5"
+        />
+      </section>
+      <div class="modal show-modal">
+        <i class="fa-solid fa-xmark close-modal"></i>
+        <div class="modal-content">
+          <img src="./images/city-1.jpeg" alt="" class="main-img" />
+          <h2 class="image-name">Image Name</h2>
+          <div class="button-container">
+            <button class="btn btn-prev">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="btn btn-next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="modal-images">
+          <img src="./images/city-2.jpeg" alt="" class="modal-image selected" />
+          <img src="./images/city-3.jpeg" alt="" class="modal-image" />
+        </div>
+      </div>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>
