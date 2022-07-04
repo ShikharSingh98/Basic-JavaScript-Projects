@@ -69,4 +69,30 @@ button {
   background: transparent;
   outline: none;
   border: none;
+  cursor: pointer;
+}
+
+/* Main */
+
+.main {
+  max-width: 120rem;
+  margin: 2.4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 2.4rem;
+}
+
+.result {
+  font-size: 1.6rem;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  border-radius: 3px;
+  box-shadow: var(--light-box-shadow);
 }
