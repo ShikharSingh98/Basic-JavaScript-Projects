@@ -71,3 +71,75 @@ button {
   border: none;
   cursor: pointer;
 }
+
+/* Header */
+
+.header {
+  text-align: center;
+  margin-top: 2.4rem;
+}
+
+.header__heading {
+  font-size: 3.6rem;
+  color: var(--black-color);
+}
+
+.underline {
+  display: inline-block;
+  width: 20%;
+  height: 0.4rem;
+  background-color: var(--primary-color);
+}
+
+/* Products */
+
+.products {
+  margin: 4.8rem auto;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 2.4rem;
+  max-width: 120rem;
+  padding: 0 2.4rem;
+}
+
+.product {
+  max-width: 40rem;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.product:hover {
+  box-shadow: var(--light-box-shadow);
+}
+
+.product__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+.product__name {
+  font-size: 1.6rem;
+  color: var(--black-color);
+}
+
+.product__price {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
